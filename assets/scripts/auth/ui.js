@@ -86,8 +86,8 @@ pokemons.forEach((pokemon) => {
   htmlStr += pokemonHTML
 })
 
-  $('#some-div').html(htmlStr)
-  $('#some-div').show()
+  $('.some-div').html(htmlStr)
+  $('.some-div').show()
   $('#show-pokemon-message').text('Here is a list of all your pokemon')
   $('#show-pokemon-form').trigger('reset')
 }
