@@ -57,19 +57,31 @@
         <input type="submit" value="Sign Out">
       </form>
 
+      <div class='example'>
+        <div class='in-example'>
+        Example Pokemon:<br>
+        <h3>Name: Blastoise</h3>
+        ID: *randomly generated string*<br>
+        Move 1: Hydro Pump<br>
+        Move 2: Rapid Spin<br>
+        Move 3: Rain Dance<br>
+        Move 4: Shell Smash<br>
+      </div>
+      </div>
+
       <p id="show-pokemon-message"></p>
       <form id="show-pokemon-form">
         <input type="submit" value="View team">
       </form>
 
-      <div id="flex-container">
+      <div class="flex-container">
       <div class="some-div"></div>
       </div>
-      <div id="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
+      <div class="flex-container">
+      <div class="test">1</div>
+      <div class="test">2</div>
+      <div class="test">3</div>
+      <div class="test">4</div>
       </div>
 
       <p id="add-pokemon-message"></p>
@@ -99,6 +111,26 @@
           <input type="submit" value="Remove">
       </fieldset>
     </form>
+    <p id="update-pokemon-message"></p>
+<form id="update-pokemon-form" class="border">
+  <fieldset>
+    <div class="legend"><legend>Edit Pokemon</legend></div>
+    <label for="index-pokemon">Enter ID here:</label>
+    <input id="index-pokemon" type="text" name="pokemon[id]" placeholder="#########"><br>
+    <label for="new-pokemon-name">Name</label>
+    <input id="new-pokemon-name" type="text" name="pokemon[name]" placeholder="Name"><br>
+    <label for="new-pokemon-move1">Move 1:</label>
+    <input id="new-pokemon-move1" type="text" name="pokemon[move1]" placeholder="Move 1"><br>
+    <label for="new-pokemon-move2">Move 2:</label>
+    <input id="new-pokemon-move2" type="text" name="pokemon[move2]" placeholder="Move 2"><br>
+    <label for="new-pokemon-move3">Move 3:</label>
+    <input id="new-pokemon-move3" type="text" name="pokemon[move3]" placeholder="Move 3"><br>
+    <label for="new-pokemon-move4">Move 4:</label>
+    <input id="new-pokemon-move4" type="text" name="pokemon[move4]" placeholder="Move 4"><br>
+
+    <input type="submit" value="Update!">
+  </fieldset>
+</form>
     </section>
     </body>
 </html>

@@ -58,6 +58,14 @@ const deletePokemon = function (pokemonId) {
     headers: {Authorization: 'Bearer ' + store.user.token}
   })
 }
+const updatePokemon = function (data) {
+  return $.ajax({
+    url: config.apiUrl + `/pokemons/${data.pokemon.id}`,
+    method: "PATCH",
+    headers: {Authorization: 'Bearer ' + store.user.token},
+    data: data
+  })
+}
 module.exports = {
   signUp,
   signIn,
@@ -65,5 +73,6 @@ module.exports = {
   signOut,
   addPokemon,
   showPokemon,
-  deletePokemon
+  deletePokemon,
+  updatePokemon
 }

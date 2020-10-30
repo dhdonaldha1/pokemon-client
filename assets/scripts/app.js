@@ -14,4 +14,5 @@ $(() => {
   $('#add-pokemon-form').on('submit', authEvents.onAddPokemon)
   $('#show-pokemon-form').on('submit', authEvents.onShowPokemon)
   $('#delete-pokemon-form').on('submit', authEvents.onDeletePokemon)
+  $('#update-pokemon-form').on('submit', authEvents.onUpdatePokemon)
 })

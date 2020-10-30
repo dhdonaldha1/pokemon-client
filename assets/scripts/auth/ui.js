@@ -73,8 +73,8 @@ const pokemons = response.pokemons
 let htmlStr = ''
 pokemons.forEach((pokemon) => {
   let pokemonHTML = (`
-    <div>
-      <h3>${pokemon.name}</h3>
+    <div class="team">
+      <center><h3>${pokemon.name}</h3></center>
       <ul>
         <li>ID: ${pokemon._id}</li>
         <li>Move 1: ${pokemon.move1}</li>
@@ -107,6 +107,17 @@ const onDeletePokemonFailure = function(error) {
   $('#delete-pokemon-message').show()
 }
 
+const onUpdatePokemonSuccess = function(response) {
+  $('#update-pokemon-message').text('Pokemon successfully updated!')
+  $('#update-pokemon-form').trigger('reset')
+  $('#update-pokemon-message').show()
+}
+const onUpdatePokemonFailure = function(error) {
+  $('#update-pokemon-message').text('Pokemon failed to update.')
+  $('#update-pokemon-form').trigger('reset')
+  $('#update-pokemon-message').show()
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -121,5 +132,7 @@ module.exports = {
   onShowPokemonSuccess,
   onShowPokemonFailure,
   onDeletePokemonSuccess,
-  onDeletePokemonFailure
+  onDeletePokemonFailure,
+  onUpdatePokemonSuccess,
+  onUpdatePokemonFailure
 }

@@ -57,6 +57,14 @@ const onDeletePokemon = function (event) {
     .then(ui.onDeletePokemonSuccess)
     .catch(ui.onDeletePokemonFailure)
 }
+const onUpdatePokemon = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.updatePokemon(data)
+    .then(ui.onUpdatePokemonSuccess)
+    .catch(ui.onUpdatePokemonFailure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
@@ -65,5 +73,5 @@ module.exports = {
   onAddPokemon,
   onShowPokemon,
   onDeletePokemon,
-  onDeletePokemon
+  onUpdatePokemon
 }
