@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Pokemon Team Builder</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,7 +12,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Pokemon Team Builder</h1>
+      <h1><img src="https://imgur.com/46NpbwZ.jpg"></h1>
+      <h2>Team Builder</h2>
       <section>
       <p id="sign-up-message"></p>
       <form id="sign-up-form" class="border">
@@ -24,19 +25,19 @@
             <input id="password" type="password" name="credentials[password]" placeholder="Password">
           <label for="password_confirmation">Password Confirmation</label>
             <input id="password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-          <input type="submit" value="Sign up!">
+          <input class="btn btn-primary btn-sm" input type="submit" value="Sign up!">
         </fieldset>
       </form>
 
       <p id="sign-in-message"></p>
     <form id="sign-in-form" class="border">
             <fieldset>
-              <legend>Sign in!</legend>
+              <div class='legend'><legend>Sign in!</legend></div>
               <label for="sign-in-email">Email</label>
               <input id="sign-in-email" name="credentials[email]" type="email" placeholder="Enter your Email">
               <label for="sign-in-password">Password</label>
               <input id="sign-in-password" name="credentials[password]" type="password" placeholder="Enter your Password">
-              <input type="submit" value="Login">
+              <input class="btn btn-outline-danger btn-sm" input type="submit" value="Login">
             </fieldset>
           </form>
 
@@ -62,11 +63,45 @@
         Example Pokemon:<br>
         <h3>Name: Blastoise</h3>
         ID: *randomly generated string*<br>
+        <form id="nature-selection">
+          <label for="natures">Choose a nature:</label>
+          <select name="natures" id="natures">
+            <option value="Adamant">Adamant</option>
+            <option value="Bashful">Bashful</option>
+            <option value="Bold">Bold</option>
+            <option value="Brave">Brave</option>
+            <option value="Calm">Calm</option>
+            <option value="Careful">Careful</option>
+            <option value="Docile">Docile</option>
+            <option value="Gentle">Gentle</option>
+            <option value="Hardy">Hardy</option>
+            <option value="Hasty">Hasty</option>
+            <option value="Impish">Impish</option>
+            <option value="Jolly">Jolly</option>
+            <option value="Lax">Lax</option>
+            <option value="Lonely">Lonely</option>
+            <option value="Mild">Mild</option>
+            <option value="Modest">Modest</option>
+            <option value="Naive">Naive</option>
+            <option value="Naughty">Naughty</option>
+            <option value="Quiet">Quiet</option>
+            <option value="Quirky">Quirky</option>
+            <option value="Rash">Rash</option>
+            <option value="Relaxed">Relaxed</option>
+            <option value="Sassy">Sassy</option>
+            <option value="Serious">Serious</option>
+            <option value="Timid">Timid</option>
+          </select>
+          <input type="submit" value="Submit">
+        </form>
         Move 1: Hydro Pump<br>
         Move 2: Rapid Spin<br>
         Move 3: Rain Dance<br>
         Move 4: Shell Smash<br>
       </div>
+      <div class='pokeball-img'>
+      <img src="https://imgur.com/lC3uFSZ.jpg" alt="pokeball-img" width="110" height="100">
+    </div>
       </div>
 
       <p id="show-pokemon-message"></p>
@@ -77,12 +112,12 @@
       <div class="flex-container">
       <div class="some-div"></div>
       </div>
-      <div class="flex-container">
+      <!-- <div class="flex-container">
       <div class="test">1</div>
       <div class="test">2</div>
       <div class="test">3</div>
       <div class="test">4</div>
-      </div>
+      </div> -->
 
       <p id="add-pokemon-message"></p>
       <form id="add-pokemon-form" class="border">

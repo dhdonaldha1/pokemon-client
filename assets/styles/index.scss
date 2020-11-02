@@ -1,8 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
 
+h1{
+  text-align: center;
+  background-color: black
+}
+h2{
+  text-align: center;
+  background-color: black;
+  color: yellow
+}
 .flex-container {
-  column-count: 2;
-
+  column-count: 2
 }
 
 .test{
@@ -11,7 +19,7 @@
 }
 
 .some-div{
-  
+
 }
 
 .team {
@@ -22,10 +30,23 @@
 
 .example{
   background-color: pink;
-  text-align: center
+  text-align: center;
+  display: flex;
+  justify-content: center
 }
 
 .in-example{
   display: inline-block;
   text-align: left
+}
+
+.pokeball-img{
+  position: relative;
+  padding-left: 20px;
+  order: 2;
+  padding-top: 40px
+}
+
+.legend{
+  font-family: verdana
 }

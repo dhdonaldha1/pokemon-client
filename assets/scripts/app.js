@@ -7,6 +7,12 @@ const authEvents = require('./auth/events')
 // require('./example')
 
 $(() => {
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('#show-pokemon-form').hide()
+  $('#add-pokemon-form').hide()
+  $('#delete-pokemon-form').hide()
+  $('#update-pokemon-form').hide()
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)

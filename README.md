@@ -9,7 +9,7 @@ This application is a place where users can manage(post, view, update, delete) t
 <a href="https://git.generalassemb.ly/ga-wdi-boston/capstone-project/blob/master/requirements.md">Requirements</a>
 
 ## Planning Story
-After completing the models and routes in the back end api, I created the sign-up, sign-in, change password and sign-out forms in html.  Then completed and tested the user auth form functions.  
+After completing the models and routes in the back end api, I created the sign-up, sign-in, change password and sign-out forms in html.  Then completed and tested the user auth form functions. Same process was done for the pokemon crud actions(create, destroy, update, view all) and tested.  Next was to get the data to show as an html string in 2 columns.  Once the data looked decent on the webpage, added image and color.  Then showing appropriate forms and hiding forms when appropriate.      
 
 ### User Stories
 
@@ -31,7 +31,10 @@ After completing the models and routes in the back end api, I created the sign-u
 
 
 ### Unsolved Problems
--
+- 1 click button for delete form
+- allow users to add an image for pokemon where the pokeball currently is
+- add more styling
+- align buttons/text
 
 ## Images
 

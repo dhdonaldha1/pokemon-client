@@ -17,16 +17,16 @@ store.user = response.user
   $('#sign-in-message').text('Thanks for signing in ' + response.user.email)
   $('#sign-in-form').trigger('reset')
   $('#sign-in-message').show()
-  // $('#sign-up-message').hide()
-  // $('#change-password').show()
-  // $('#sign-out').show()
-  // $('#add-anime-form').show()
-  // $('#delete-anime-form').show()
-  // $('#show-anime').show()
-  // $('#edit-anime-form').show()
-  // $('#sign-up-form').hide()
+  $('#change-password').show()
+  $('#sign-out').show()
+  $('#show-pokemon-form').show()
+  $('#add-pokemon-form').show()
+  $('#delete-pokemon-form').show()
+  $('#update-pokemon-form').show()
+  $('#sign-up-form').hide()
+  $('#sign-up-message').hide()
   // $('#sign-out-message').hide()
-  // $('#sign-in-form').hide()
+  $('#sign-in-form').hide()
 }
 const onSignInFailure = function(error) {
   $('#sign-in-message').show()
@@ -49,6 +49,22 @@ const onSignOutSuccess = function(response) {
   $('#sign-out-message').show()
   $('#sign-out-message').text('Signed out, Please sign in again!')
   $('#sign-out-form').trigger('reset')
+  $('#change-password').hide()
+  $('#sign-up-message').hide()
+  $('#sign-in-message').hide()
+  $('#change-password-message').hide()
+  $('#sign-out').hide()
+  $('#show-pokemon-form').hide()
+  $('#add-pokemon-form').hide()
+  $('#delete-pokemon-form').hide()
+  $('#update-pokemon-form').hide()
+  $('#show-pokemon-message').hide()
+  $('#add-pokemon-message').hide()
+  $('#delete-pokemon-message').hide()
+  $('#update-pokemon-message').hide()
+  $('.some-div').hide()
+  $('#sign-up-form').show()
+  $('#sign-in-form').show()
 }
 const onSignOutFailure = function(error) {
   $('#sign-out-message').show()
@@ -77,11 +93,46 @@ pokemons.forEach((pokemon) => {
       <center><h3>${pokemon.name}</h3></center>
       <ul>
         <li>ID: ${pokemon._id}</li>
+        <form id="nature-selection">
+          <label for="natures">Choose a nature:</label>
+          <select name="natures" id="natures">
+            <option value="Adamant">Adamant</option>
+            <option value="Bashful">Bashful</option>
+            <option value="Bold">Bold</option>
+            <option value="Brave">Brave</option>
+            <option value="Calm">Calm</option>
+            <option value="Careful">Careful</option>
+            <option value="Docile">Docile</option>
+            <option value="Gentle">Gentle</option>
+            <option value="Hardy">Hardy</option>
+            <option value="Hasty">Hasty</option>
+            <option value="Impish">Impish</option>
+            <option value="Jolly">Jolly</option>
+            <option value="Lax">Lax</option>
+            <option value="Lonely">Lonely</option>
+            <option value="Mild">Mild</option>
+            <option value="Modest">Modest</option>
+            <option value="Naive">Naive</option>
+            <option value="Naughty">Naughty</option>
+            <option value="Quiet">Quiet</option>
+            <option value="Quirky">Quirky</option>
+            <option value="Rash">Rash</option>
+            <option value="Relaxed">Relaxed</option>
+            <option value="Sassy">Sassy</option>
+            <option value="Serious">Serious</option>
+            <option value="Timid">Timid</option>
+          </select>
+          <input type="submit" value="Submit">
+        </form>
         <li>Move 1: ${pokemon.move1}</li>
         <li>Move 2: ${pokemon.move2}</li>
         <li>Move 3: ${pokemon.move3}</li>
         <li>Move 4: ${pokemon.move4}</li>
     </div>
+    <div class="pokemon">
+    <img src="https://imgur.com/lC3uFSZ.jpg" alt="pokeball-img" width="110" height="100"><button type="button">Click Me!</button>
+    </div>
+
         `)
   htmlStr += pokemonHTML
 })
