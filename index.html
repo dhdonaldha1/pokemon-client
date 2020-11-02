@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Pokemon Team Builder</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1><img src="https://imgur.com/46NpbwZ.jpg"></h1>
+      <h2>Team Builder</h2>
+      <section>
+      <p id="sign-up-message"></p>
+      <form id="sign-up-form" class="border">
+        <fieldset>
+          <div class="legend"><legend>Sign up!</legend></div>
+          <label for="email">Email</label>
+            <input id="email" type="email" name="credentials[email]" placeholder="Email">
+          <label for="password">Password</label>
+            <input id="password" type="password" name="credentials[password]" placeholder="Password">
+          <label for="password_confirmation">Password Confirmation</label>
+            <input id="password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input class="btn btn-primary btn-sm" input type="submit" value="Sign up!">
+        </fieldset>
+      </form>
+
+      <p id="sign-in-message"></p>
+    <form id="sign-in-form" class="border">
+            <fieldset>
+              <div class='legend'><legend>Sign in!</legend></div>
+              <label for="sign-in-email">Email</label>
+              <input id="sign-in-email" name="credentials[email]" type="email" placeholder="Enter your Email">
+              <label for="sign-in-password">Password</label>
+              <input id="sign-in-password" name="credentials[password]" type="password" placeholder="Enter your Password">
+              <input class="btn btn-outline-danger btn-sm" input type="submit" value="Login">
+            </fieldset>
+          </form>
+
+      <p id="change-password-message"></p>
+      <form id="change-password" class="border">
+        <fieldset>
+          <legend>Change Password</legend>
+          <label for="old-pw">Old Password</label>
+            <input id="old-pw" name="passwords[old]" type="password" placeholder="Old Password">
+          <label for="new-pw">New Password</label>
+            <input id="new-pw" name="passwords[new]" type="password" placeholder="New Password">
+          <input type="submit" value="CHANGE">
+        </fieldset>
+      </form>
+
+      <p id="sign-out-message"></p>
+      <form id="sign-out">
+        <input type="submit" value="Sign Out">
+      </form>
+
+      <div class='example'>
+        <div class='in-example'>
+        Example Pokemon:<br>
+        <h3>Name: Blastoise</h3>
+        ID: *randomly generated string*<br>
+        <form id="nature-selection">
+          <label for="natures">Choose a nature:</label>
+          <select name="natures" select id="natures" onchange="func()">
+            <option value="Adamant">Adamant</option>
+            <option value="Bashful">Bashful</option>
+            <option value="Bold">Bold</option>
+            <option value="Brave">Brave</option>
+            <option value="Calm">Calm</option>
+            <option value="Careful">Careful</option>
+            <option value="Docile">Docile</option>
+            <option value="Gentle">Gentle</option>
+            <option value="Hardy">Hardy</option>
+            <option value="Hasty">Hasty</option>
+            <option value="Impish">Impish</option>
+            <option value="Jolly">Jolly</option>
+            <option value="Lax">Lax</option>
+            <option value="Lonely">Lonely</option>
+            <option value="Mild">Mild</option>
+            <option value="Modest">Modest</option>
+            <option value="Naive">Naive</option>
+            <option value="Naughty">Naughty</option>
+            <option value="Quiet">Quiet</option>
+            <option value="Quirky">Quirky</option>
+            <option value="Rash">Rash</option>
+            <option value="Relaxed">Relaxed</option>
+            <option value="Sassy">Sassy</option>
+            <option value="Serious">Serious</option>
+            <option value="Timid">Timid</option>
+          </select>
+          <input type="submit" value="Save">
+        </form>
+        Move 1: Hydro Pump<br>
+        Move 2: Rapid Spin<br>
+        Move 3: Rain Dance<br>
+        Move 4: Shell Smash<br>
+      </div>
+      <div class='pokeball-img'>
+      <img src="https://imgur.com/lC3uFSZ.jpg" alt="pokeball-img" width="110" height="100">
+    </div>
+      </div>
+
+      <p id="show-pokemon-message"></p>
+      <form id="show-pokemon-form">
+        <input type="submit" value="View team">
+      </form>
+
+      <div class="flex-container">
+      <div class="some-div"></div>
+      </div>
+      <!-- <div class="flex-container">
+      <div class="test">1</div>
+      <div class="test">2</div>
+      <div class="test">3</div>
+      <div class="test">4</div>
+      </div> -->
+
+      <p id="add-pokemon-message"></p>
+      <form id="add-pokemon-form" class="border">
+        <fieldset>
+          <div class="legend"><legend>Add Pokemon to your team!</legend></div>
+          <label for="pokemon-name">Name</label>
+          <input id="pokemon-name" type="text" name="pokemon[name]" placeholder="Name"><br>
+          <label for="pokemon-move1">Move 1:</label>
+          <input id="pokemon-move1" type="text" name="pokemon[move1]" placeholder="Move Name"><br>
+          <label for="pokemon-move2">Move 2:</label>
+          <input id="pokemon-move2" type="text" name="pokemon[move2]" placeholder="Move name"><br>
+          <label for="pokemon-move3">Move 3:</label>
+          <input id="pokemon-move3" type="text" name="pokemon[move3]" placeholder="Move name"><br>
+          <label for="pokemon-move4">Move 4:</label>
+          <input id="pokemon-move4" type="text" name="pokemon[move4]" placeholder="Move name">
+          <input type="submit" value="Add pokemon!">
+        </fieldset>
+      </form>
+
+      <p id="delete-pokemon-message"></p>
+      <form id="delete-pokemon-form" class="border">
+        <fieldset>
+          <div class="legend"><legend>Delete a pokemon by pasting ID here</legend></div>
+          <label for="delete-pokemon"></label>
+          <input id="delete-pokemon" type="text" name="pokemon[id]" placeholder="#########">
+          <input type="submit" value="Remove">
+      </fieldset>
+    </form>
+    <p id="update-pokemon-message"></p>
+<form id="update-pokemon-form" class="border">
+  <fieldset>
+    <div class="legend"><legend>Edit Pokemon</legend></div>
+    <label for="index-pokemon">Enter ID here:</label>
+    <input id="index-pokemon" type="text" name="pokemon[id]" placeholder="#########"><br>
+    <label for="new-pokemon-name">Name</label>
+    <input id="new-pokemon-name" type="text" name="pokemon[name]" placeholder="Name"><br>
+    <label for="new-pokemon-move1">Move 1:</label>
+    <input id="new-pokemon-move1" type="text" name="pokemon[move1]" placeholder="Move 1"><br>
+    <label for="new-pokemon-move2">Move 2:</label>
+    <input id="new-pokemon-move2" type="text" name="pokemon[move2]" placeholder="Move 2"><br>
+    <label for="new-pokemon-move3">Move 3:</label>
+    <input id="new-pokemon-move3" type="text" name="pokemon[move3]" placeholder="Move 3"><br>
+    <label for="new-pokemon-move4">Move 4:</label>
+    <input id="new-pokemon-move4" type="text" name="pokemon[move4]" placeholder="Move 4"><br>
+
+    <input type="submit" value="Update!">
+  </fieldset>
+</form>
+    </section>
+    </body>
+</html>
