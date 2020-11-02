@@ -16784,7 +16784,7 @@ module.exports = {
 
 var apiUrl = void 0;
 var apiUrls = {
-  production: 'https://dons-pokemon.herokuapp.com/',
+  production: 'https://dons-pokemon.herokuapp.com',
   development: 'http://localhost:4741'
 };
 
