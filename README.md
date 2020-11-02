@@ -4,7 +4,7 @@ This application is a place where users can manage(post, view, update, delete) t
 
 ## Important Links
 <a href="">Deployed client</a>
-<a href="">Deployed API</a>
+<a href="https://dons-pokemon.herokuapp.com/">Deployed API</a>
 <a href="https://github.com/dhdonaldha1/pokemon-api">API repository</a>
 <a href="https://git.generalassemb.ly/ga-wdi-boston/capstone-project/blob/master/requirements.md">Requirements</a>
 
