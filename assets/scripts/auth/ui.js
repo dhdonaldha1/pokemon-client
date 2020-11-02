@@ -122,7 +122,7 @@ pokemons.forEach((pokemon) => {
             <option value="Serious">Serious</option>
             <option value="Timid">Timid</option>
           </select>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Save">
         </form>
         <li>Move 1: ${pokemon.move1}</li>
         <li>Move 2: ${pokemon.move2}</li>

@@ -22,3 +22,7 @@ $(() => {
   $('#delete-pokemon-form').on('submit', authEvents.onDeletePokemon)
   $('#update-pokemon-form').on('submit', authEvents.onUpdatePokemon)
 })
+
+function func(){
+let nature = $("#natures option:selected").val();
+}

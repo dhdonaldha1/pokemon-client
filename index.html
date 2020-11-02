@@ -19,7 +19,7 @@
       <form id="sign-up-form" class="border">
         <fieldset>
           <div class="legend"><legend>Sign up!</legend></div>
-          <label for="email"></label>
+          <label for="email">Email</label>
             <input id="email" type="email" name="credentials[email]" placeholder="Email">
           <label for="password">Password</label>
             <input id="password" type="password" name="credentials[password]" placeholder="Password">
@@ -65,7 +65,7 @@
         ID: *randomly generated string*<br>
         <form id="nature-selection">
           <label for="natures">Choose a nature:</label>
-          <select name="natures" id="natures">
+          <select name="natures" select id="natures" onchange="func()">
             <option value="Adamant">Adamant</option>
             <option value="Bashful">Bashful</option>
             <option value="Bold">Bold</option>
@@ -92,7 +92,7 @@
             <option value="Serious">Serious</option>
             <option value="Timid">Timid</option>
           </select>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Save">
         </form>
         Move 1: Hydro Pump<br>
         Move 2: Rapid Spin<br>
