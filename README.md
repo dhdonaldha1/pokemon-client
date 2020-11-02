@@ -37,7 +37,9 @@ After completing the models and routes in the back end api, I created the sign-u
 - align buttons/text
 
 ## Images
-
+### Site image:
+<img src="https://imgur.com/19cFJRm.jpg">
+<img src="https://imgur.com/CPVgGXY.jpg">
 ---
 
 #### Wireframe:
