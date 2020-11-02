@@ -3,7 +3,7 @@
 This application is a place where users can manage(post, view, update, delete) their own competitive pokemon teams.
 
 ## Important Links
-<a href="">Deployed client</a>
+<a href="https://dhdonaldha1.github.io/pokemon-client/">Deployed client</a>
 <a href="https://dons-pokemon.herokuapp.com/">Deployed API</a>
 <a href="https://github.com/dhdonaldha1/pokemon-api">API repository</a>
 <a href="https://git.generalassemb.ly/ga-wdi-boston/capstone-project/blob/master/requirements.md">Requirements</a>
